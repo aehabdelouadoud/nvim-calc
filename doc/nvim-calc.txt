@@ -1,0 +1,75 @@
+*myplugin.txt*      For Neovim  -- MyPlugin Calculator
+
+===============================================================================
+*MyPlugin* *calculator*
+
+MyPlugin is a simple Neovim plugin that evaluates mathematical expressions using `bc`.
+
+===============================================================================
+CONTENTS                                                       *MyPlugin-contents*
+
+1. |MyPlugin-installation|      Installing the plugin
+2. |MyPlugin-usage|             How to use the plugin
+3. |MyPlugin-dependencies|      Required dependencies
+4. |MyPlugin-testing|           Running tests
+5. |MyPlugin-license|           License information
+
+===============================================================================
+
+INSTALLATION                                                  *MyPlugin-installation*
+
+Place `myplugin.lua` inside:
+
+```
+~/.config/nvim/lua/myplugin.lua
+```
+
+Then, load it in `init.lua`:
+
+```lua
+require("myplugin")
+```
+
+===============================================================================
+
+USAGE                                                          *MyPlugin-usage*
+
+1. **Select a math expression** in visual mode (e.g., `10 + 20 / log(10)`).
+2. Run the command:
+
+   ```
+   :Calc
+   ```
+
+3. The expression will be replaced or appended with the result:
+
+   ```
+   10 + 20 / log(10) = 16.6615
+   ```
+
+===============================================================================
+
+DEPENDENCIES                                             *MyPlugin-dependencies*
+
+- `bc` (should be available by default on most Linux systems)
+
+===============================================================================
+
+TESTING                                                      *MyPlugin-testing*
+
+Use `busted` to run tests:
+
+```sh
+busted plugin_spec.lua
+```
+
+===============================================================================
+
+LICENSE                                                      *MyPlugin-license*
+
+MIT
+
+===============================================================================
+
+vim:tw=78:ts=8:ft=help:norl:
+
